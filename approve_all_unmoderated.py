@@ -30,6 +30,7 @@ class Bot(object):
 
     def approve_all_unmoderated(self):
         '''Goes through subreddits individually and then approves all submission, then demods'''
+
         for subreddit in self.r.get_my_moderation(limit=None):
             for thing in subreddit.get_unmoderated(limit=None):
                 thing.approve()
