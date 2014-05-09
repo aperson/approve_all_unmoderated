@@ -41,3 +41,4 @@ class Bot(object):
 
 if __name__ == '__main__':
     bot = Bot(USERNAME, PASSWORD)
+    bot.run()
