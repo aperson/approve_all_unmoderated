@@ -15,7 +15,7 @@ class Bot(object):
     def __init__(self, username, password):
         user_agent = '/u/{} running approve_all_unmoderated.py'.format(username)
         self.r = praw.Reddit(user_agent, handler=MultiprocessHandler())
-        self.r.login(username, password)
+        self.r.login(username, password, disable_depreciated=True)
 
     def accept_mod_invites(self):
         '''Accepts all moderator invites.'''
