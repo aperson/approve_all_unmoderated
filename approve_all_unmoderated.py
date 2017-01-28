@@ -46,5 +46,5 @@ class Bot(object):
         self.approve_all_unmoderated()
 
 if __name__ == '__main__':
-    bot = Bot(USERNAME, PASSWORD)
+    bot = Bot(USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET)
     bot.run()
