@@ -28,7 +28,7 @@ class Bot(object):
                 if message.distinguished == 'moderator':
                     # lets assume every message is a mod-invite
                     try:
-                        subreddit.mod.accpet_invite()
+                        subreddit.mod.accept_invite()
                     except praw.exceptions.APIException:
                         pass
 
