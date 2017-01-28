@@ -27,11 +27,11 @@ class Bot(object):
             subreddit = self.r.subreddit(message.subreddit)
             if message.was_comment == False:
                 if message.distinguished == 'moderator':
-                # lets assume every message is a mod-invite
-                try:
-                    subreddit.mod.accpet_invite()
-                except praw.exceptions.APIException:
-                    pass
+                    # lets assume every message is a mod-invite
+                    try:
+                        subreddit.mod.accpet_invite()
+                    except praw.exceptions.APIException:
+                        pass
 
     def approve_all_unmoderated(self):
         '''Goes through subreddits individually and then approves all submission, then demods'''
