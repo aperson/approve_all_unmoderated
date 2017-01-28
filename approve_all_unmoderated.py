@@ -25,8 +25,8 @@ class Bot(object):
         for message in self.r.inbox.unread(limit=None):
             message.mark_read()
             subreddit = self.r.subreddit(message.subreddit)
-            if message.was_comment = False:
-                if message.distinguished = 'moderator':
+            if message.was_comment == False:
+                if message.distinguished == 'moderator':
                 # lets assume every message is a mod-invite
                 try:
                     subreddit.mod.accpet_invite()
