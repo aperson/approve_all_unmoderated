@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import praw
-from praw.handlers import MultiprocessHandler
 
 try:
     from config import *  # NOQA
